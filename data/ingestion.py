@@ -4,6 +4,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
+
 def ingest_docs():
     # Load documents
     loader = PyPDFLoader(file_path="data\\Building Microservices.pdf")
@@ -18,13 +19,11 @@ def ingest_docs():
     # Embed documents
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
-    PineconeVectorStore.from_documents(documents, embeddings, index_name=os.environ["PINECONE_INDEX_NAME"])
+    PineconeVectorStore.from_documents(
+        documents, embeddings, index_name=os.environ["PINECONE_INDEX_NAME"]
+    )
     print("Documents ingested into Pinecone")
 
 
 if __name__ == "__main__":
     ingest_docs()
-
-
-
-

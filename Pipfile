@@ -11,6 +11,7 @@ langchainhub = "*"
 langchain-pinecone = "*"
 python-dotenv = "*"
 pypdf = "*"
+black = "*"
 
 [dev-packages]
 
