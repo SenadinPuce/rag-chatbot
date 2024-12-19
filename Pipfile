@@ -12,6 +12,8 @@ langchain-pinecone = "*"
 python-dotenv = "*"
 pypdf = "*"
 black = "*"
+streamlit-chat = "*"
+streamlit = "*"
 
 [dev-packages]
 
